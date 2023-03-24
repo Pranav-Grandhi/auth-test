@@ -8,6 +8,9 @@
 # production
 /build
 
+# prisma
+/prisma/data.db
+
 # macOS-specific files
 .DS_Store
 
