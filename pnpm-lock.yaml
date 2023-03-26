@@ -9,6 +9,7 @@ specifiers:
   argon2: ^0.30.3
   eslint: 8.36.0
   eslint-config-next: 13.2.4
+  hibp-checker: ^1.0.0
   iron-session: ^6.3.1
   next: 13.2.4
   prisma: ^4.11.0
@@ -21,6 +22,7 @@ dependencies:
   '@prisma/client': 4.11.0_prisma@4.11.0
   '@tanstack/react-query': 4.28.0_biqbaboplfbrettd7655fr4n2y
   argon2: 0.30.3
+  hibp-checker: 1.0.0
   iron-session: 6.3.1_next@13.2.4
   next: 13.2.4_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -1561,6 +1563,10 @@ packages:
     dependencies:
       function-bind: 1.1.1
     dev: true
+
+  /hibp-checker/1.0.0:
+    resolution: {integrity: sha512-46sNL/2oGIeMCzSiwF3cPE5hJvSdVbz72qwBzIBL1PUsihx0l5vRjuWnaEDJgp0qWu0QAU4NEHoUvMmj2HzANg==}
+    dev: false
 
   /https-proxy-agent/5.0.1:
     resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
