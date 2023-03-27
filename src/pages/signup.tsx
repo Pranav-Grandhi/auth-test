@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useMutation } from "@tanstack/react-query";
+import { withIronSessionSsr } from "iron-session/next";
 
 import { InputField } from "~/components/field";
+import { sessionOptions } from "~/lib/session";
 
-{
-  /* TODO: When authenticated: redirect to home */
-}
 export default function Signup() {
   const router = useRouter();
 
@@ -77,3 +76,20 @@ export default function Signup() {
     </>
   );
 }
+
+export const getServerSideProps = withIronSessionSsr(async function ({
+  req,
+  res,
+}) {
+  if (req.session.user) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: true,
+      },
+    };
+  }
+
+  return { props: {} };
+},
+sessionOptions);
